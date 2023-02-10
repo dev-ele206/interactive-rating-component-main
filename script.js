@@ -10,7 +10,7 @@ ratingForm.addEventListener("submit", function(e) {
 
     if(selectedInput !== null){
         const selectedStar = document.querySelector("#rating-selected");
-        selectedStar.textContent = "You selected " + selectedInput.getAttribute("value") + " out of 5";
+        selectedStar.textContent = `You selected ${selectedInput.getAttribute("value")} out of 5`;
         firstPanel.classList.add('hidden');
         secondPanel.classList.remove('hidden');
     }
