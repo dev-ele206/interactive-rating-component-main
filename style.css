@@ -12,6 +12,7 @@ body {
     transform: translate(-50%, -50%);
     border-radius: 10px;
     width: 90%;
+    height: 300px;
 }
 
 #star-icon {
@@ -19,7 +20,7 @@ body {
 }
 
 svg {
-    background: hsl(216, 12%, 54%);
+    background: hsl(213, 19%, 23%);
     padding: 5px;
     border-radius: 20px;
 }
@@ -40,32 +41,69 @@ p,
 .btns {
     display: flex;
     justify-content: center;
-
-
 }
 
-.btn {
-    margin: 0 5px;
-    background-color: white;
-    border: none;
-    color: hsl(217, 12%, 63%);
-    border-radius: 20px;
+.btns input[type="radio"] {
+    display: none;
 }
 
-#submit {
-    height: 20px;
-    width: 100px;
-    margin: 25px -50px;
-    position: relative;
-    top: 50%;
-    left: 50%;
+.btns input[type="radio"]:checked+label {
+    transition: all 0.5s;
+    background-color: hsl(217, 12%, 63%);
+    color: white;
+}
+
+#submitBtn {
+    margin: 0;
+    position: absolute;
+    top: 90%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 #second-panel {
-    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
 }
 
+.hidden {
+    display: none;
+}
+
+button {
+    border: none;
+    background-color: hsl(25, 97%, 53%);
+    width: 50%;
+    height: 2.75rem;
+    border-radius: 2rem;
+    color: white;
+    letter-spacing: 0.15rem;
+    font-weight: 600;
+}
+
+button:hover {
+    color: hsl(25, 97%, 53%);
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+input:hover {
+    color: hsl(25, 97%, 53%);
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+label{
+    background-color: hsl(213, 19%, 23%);
+    height: 2.75rem;
+    width: 2.75rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(217, 12%, 63%);
+}

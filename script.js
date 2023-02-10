@@ -1,23 +1,17 @@
-const ratingNum = [
-    1,2,3,4,5
-]
+const firstPanel = document.querySelector('#first-panel');
+const secondPanel = document.querySelector('#second-panel');
+const ratingForm = document.querySelector('.btns');
 
-const submitBtn = document.getElementById('submit')
 
-submitBtn.addEventListener('click', () => {
-    var ratings = document.getElementById('rating-selected');
-    ratings.innerHTML = `you selected this number`;
-})
+ratingForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const selector = "input[name=ratings]:checked";
+    const selectedInput = document.querySelector(selector);
 
-function nextWindow() {
-    var x = document.getElementById("first-panel");
-    var y = document.getElementById("second-panel");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else if (x.style.display = "none") {
-      y.style.display = "flex";
+    if(selectedInput !== null){
+        const selectedStar = document.querySelector("#rating-selected");
+        selectedStar.textContent = "You selected " + selectedInput.getAttribute("value") + " out of 5";
+        firstPanel.classList.add('hidden');
+        secondPanel.classList.remove('hidden');
     }
-  }
-
-
-
+})
